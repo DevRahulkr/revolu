@@ -2,37 +2,274 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appBody {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.appHeader {
+  text-align: center;
+}
+
+.leftBody {
+  text-align: center;
+  width: 30%;
+}
+.rightBody {
+  text-align: center;
+  width: 70%;
+}
+
+
+.navbar {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      margin-right: 25rem;
+      font-size: 20px;
+    }
+    l {
+      margin-left: 34rem;
+      font-size: 20px;
+    }
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    
+    .nav-item {
+      margin-right: 1rem;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      &:hover {
+        color: #8A2BE2;
+        background-color:  #f0f0f0;
+      }
+      
+      &.selected {
+        color: #8A2BE2;
+      }
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.StyledHr {
+  border: 1px solid lightgray;
+}
+
+.collection{
+  display: flex;
+  .headerName{
+   display: flex;
+   font-size: 2rem;
+   font-weight: 600;
+   margin: 1rem;
+  }
+  .contents{
+    display: flex;
+    font-size: 15px;position: relative;
+    margin: 5rem 5rem 5rem -12rem;
+  }
+}
+
+.cardContained{
+  display: flex;
+  width: 13rem;
+  margin: 0.5rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainCollection {
+  border: 1px solid #ccc; /* Add a border for clarity */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  padding: 20px; /* Add padding for spacing inside the shadow box */
+  border-radius: 19px;
+  margin: 2rem 1rem 0rem 8rem;
+}
+
+/* Additional styles for demonstration purposes */
+.mainCollection > div {
+  margin-bottom: 10px; /* Add margin between child div elements */
+}
+
+.myCollection {
+  font-weight: 500;
+  font-size: 1.2rem;
+  display: flex; /* Example styling for the collection title */
+}
+
+.mainCollection > div > div {
+  cursor: pointer; /* Change cursor to pointer for clickable elements */
+}
+
+/* Style the IconButton if needed */
+.mainCollection .MuiIconButton-root {
+  /* margin-left: 67px; */
+  display: flex; /* Example margin for the IconButton */
+}
+
+
+.parentDiv{
+  display: flex;
+  justify-content: space-around;
+}
+
+.addLink {
+  cursor: pointer;
+  display: flex;
+  margin-left: 3rem;
+   /* Example styling for the Add Collection link */
+}
+
+.collectionItem {
+  font-size: 20px;
+  font-weight: 400;
+}
+.folderCollection{
+  display: flex;
+}
+
+
+
+.collectionStyle{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.arrowStyle{
+  margin-right: 1rem;
+}
+.newCollection{
+  display: flex;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 0.4rem;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #D3D3D3;
+  margin: 10px 0;
+}
+
+.iconStyle{
+  display: flex;
+}
+.cardIconStyle{
+  display: flex;
+}
+
+.downloadStyle{
+  display: flex;
+    justify-content: space-evenly;
+    background-color: thistle;
+    border-radius: 11px;
+}
+
+
+.MuiPaper-root.MuiCard-root {
+  border-radius: 14px; 
+  height: 200px;
+  width: 200px;/* Override border property */
+}
+
+.downloadTitle{
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.headerStyle{
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contents{
+  display: flex;
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.submitButtonStyle {
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.buttonStyle {
+  color: #000; /* Default button text color */
+}
+
+.buttonStyle:hover {
+  background-color: #4caf50; /* Green background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+.MuiDialogActions-root {
+  margin-left: 8rem;
+    height: 7rem;
+}
+.MuiInputBase-input.MuiOutlinedInput-input {
+  padding: 21.5px 73px;
+
+}
+
+.closeStyle{
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 10px; 
+  &:hover {
+    color: #8A2BE2;
+    background-color:  #f0f0f0;
+  }
+}
+.descriptionStyle{
+  display: flex;
+  margin-top: 1rem;
+}
+
+.custom-dialog {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.dialog-header {
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dialog-content {
+  margin: 20px;
+}
+
+.dialog-actions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 34%;
+}
+.deleteButtonStyle{
+  display: flex;
 }
