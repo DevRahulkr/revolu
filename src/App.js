@@ -15,7 +15,7 @@ function App() {
     if (dummydata) {
       setData(dummydata);
     }
-  }, [dummydata]);
+  }, []);
   return (
     <div className="App">
       <div className="appHeader">
